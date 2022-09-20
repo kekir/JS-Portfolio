@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= htmlWebpackPlugin.options.title %></title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+  </head>
+  <body class="is-preload">
+    <!-- Header -->
+    <%= require('../partials/header.html?raw') %>
+
+    <!-- TOP NAVIGATION -->
+    <div class="container px-6 py-3 mx-auto">
+      <nav class="py-2 flex align-center justify-between">
+        <p class="welcome text-xl">For banking pleasure: Login</p>
+        <img src="/img/logo.png" alt="Logo" class="logo h-10" />
+        <form class="login">
+          <input type="text" placeholder="user" class="login__input login__input--user" />
+          <!-- In practice, use type="password" -->
+          <input
+            type="text"
+            placeholder="PIN"
+            maxlength="4"
+            class="login__input login__input--pin"
+          />
+          <button
+            class="login__btn w-1/2 px-3 py-1 mx-1 text-sm font-medium leading-5 text-center text-white transition-colors duration-200 transform bg-gray-500 rounded-md hover:bg-blue-600 md:mx-2 md:w-auto"
+          >
+            &rarr;
+          </button>
+        </form>
+      </nav>
+    </div>
+
+    <!-- APP -->
+    <div class="app opacity-0 container mx-auto px-64 grid grid-cols-3 grid-rows-auto gap-6">
+      <!-- BALANCE -->
+      <div class="balance col-span-5 flex justify-between my-4">
+        <div>
+          <p class="balance__label text-2xl font-bold">Current balance</p>
+          <p class="balance__date">As of <span class="date">05/03/2037</span></p>
+        </div>
+        <p class="balance__value text-2xl font-bold">0000€</p>
+      </div>
+
+      <!-- MOVEMENTS -->
+      <div class="movements col-span-2 row-start-2 row-span-3 p-2 overflow-y-scroll">
+        <div class="movements__row">
+          <button class="movements__type movements__type--deposit">2 deposit</button>
+          <div class="movements__date">3 days ago</div>
+          <div class="movements__value">4 000€</div>
+        </div>
+        <div class="movements__row px-2 py-4">
+          <div class="movements__type movements__type--withdrawal">1 withdrawal</div>
+          <div class="movements__date">24/01/2037</div>
+          <div class="movements__value">-378€</div>
+        </div>
+      </div>
+
+      <!-- OPERATION: TRANSFERS -->
+      <div class="operation operation--transfer col-span-2 bg-yellow-400 px-4 py-6 rounded-xl">
+        <h2 class="pb-1 text-md">Transfer money</h2>
+        <form class="form form--transfer grid grid-cols-3 grid-rows-auto gap-1">
+          <input
+            type="text"
+            class="form__input form__input--to h-7 rounded-md bg-yellow-300 border-transparent focus:border-gray-500 focus:bg-white focus:ring-0"
+          />
+          <input
+            type="number"
+            class="form__input form__input--amount h-7 rounded-md bg-yellow-300 border-transparent focus:border-gray-500 focus:bg-white focus:ring-0"
+          />
+          <button class="form__btn form__btn--transfer">&rarr;</button>
+          <label class="form__label text-sm">Transfer to</label>
+          <label class="form__label text-sm">Amount</label>
+        </form>
+      </div>
+
+      <!-- OPERATION: LOAN -->
+      <div class="operation operation--loan col-span-2 bg-green-400 px-4 py-6 rounded-xl">
+        <h2 class="pb-1 text-md">Request loan</h2>
+        <form class="form form--loan">
+          <input
+            type="number"
+            class="form__input form__input--loan-amount h-7 rounded-md bg-green-300 border-transparent focus:border-gray-500 focus:bg-white focus:ring-0"
+          />
+          <button class="form__btn form__btn--loan">&rarr;</button>
+          <label class="form__label form__label--loan">Amount</label>
+        </form>
+      </div>
+
+      <!-- OPERATION: CLOSE -->
+      <div class="operation operation--close col-span-2 bg-red-400 px-4 py-6 rounded-xl">
+        <h2 class="pb-1 text-md">Close account</h2>
+        <form class="form form--close grid grid-cols-3 gap-1">
+          <input
+            type="text"
+            class="form__input form__input--user h-7 rounded-md bg-red-300 border-transparent focus:border-gray-500 focus:bg-white focus:ring-0"
+          />
+          <input
+            type="password"
+            maxlength="6"
+            class="form__input form__input--pin h-7 rounded-md bg-red-300 border-transparent focus:border-gray-500 focus:bg-white focus:ring-0"
+          />
+          <button class="form__btn form__btn--close w-4">&rarr;</button>
+          <label class="form__label text-sm">Confirm user</label>
+          <label class="form__label text-sm">Confirm PIN</label>
+        </form>
+      </div>
+
+      <!-- SUMMARY -->
+      <div class="summary col-span-2 mt-1 flex align-baseline py-2">
+        <div class="flex">
+          <p class="summary__label">In</p>
+          <p class="summary__value summary__value--in pl-1">0000€</p>
+        </div>
+        <div class="flex pl-4">
+          <p class="summary__label">Out</p>
+          <p class="summary__value summary__value--out pl-1">0000€</p>
+        </div>
+        <div class="flex pl-4">
+          <p class="summary__label">Interest</p>
+          <p class="summary__value summary__value--interest pl-1">0000€</p>
+        </div>
+        <button class="btn--sort pl-4">&downarrow; SORT</button>
+      </div>
+    </div>
+
+    <!-- Header -->
+    <%= require('../partials/footer.html?raw') %>
+
+    <script src="../assets/js/bank.js"></script>
+  </body>
+</html>

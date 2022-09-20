@@ -1,0 +1,1516 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= htmlWebpackPlugin.options.title %></title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <!-- <link href="/dist/main.css" rel="stylesheet" /> -->
+  </head>
+  <body class="is-preload">
+    <!-- Header -->
+    <%= require('../partials/header.html?raw') %>
+    <section class="hero bg-white dark:bg-gray-900">
+      <div
+        class="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12"
+      >
+        <div class="mr-auto place-self-center lg:col-span-7">
+          <h1
+            class="max-w-2xl mb-4 text-4xl font-bold leading-none md:text-5xl xl:text-6xl text-gray-400"
+          >
+            Portfolio picturing <br />
+            Vanilla JS
+          </h1>
+          <p
+            class="max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400"
+          >
+            From checkout to global sales tax compliance, companies around the world use our
+            platform to simplify their payment stack.
+          </p>
+          <a
+            href="#"
+            class="inline-flex items-center justify-center px-5 py-3 mr-3 text-base font-medium text-center text-white rounded-lg bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-900"
+          >
+            Get started
+            <i class="fa-solid fa-arrow-right pl-2 text-white"></i>
+          </a>
+          <a
+            href="#"
+            class="inline-flex items-center justify-center px-5 py-2 text-base font-medium text-center text-gray-900 border border-gray-300 rounded-lg hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800"
+          >
+            Solutions
+          </a>
+        </div>
+        <div class="hidden lg:mt-0 lg:col-span-5 lg:flex">
+          <img
+            src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/hero/phone-mockup.png"
+            alt="mockup"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- NODES vs ELEMENT NODES -->
+    <section class="bg-blue-100">
+      <div id="j-trav" class="container py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
+        <h2 class="font-bold text-3xl sm:text-4xl text-dark mb-8" data-name="Keki R">
+          Nodes, Element nodes, Node-list & HTMLCollections
+        </h2>
+        <!-- this comment is a child of the j-trav element -->
+
+        <article id="a">
+          <h4 class="text-2xl font-bold text-dark mb-4">Section A has five paragraphs.</h4>
+          <p class="text-base text-body-color mb-8">
+            Section A has five paragraphs. Each paragraph is a Child Element Node of the section
+            Element Node. The text inside each paragraph tag is a Text Node.
+          </p>
+          <p class="text-base text-body-color mb-8">
+            Eligendi porro fuga velit libero suscipit temporibus repellendus facilis molestias,
+            eaque modi reiciendis aut incidunt voluptas saepe assumenda omnis aperiam ex, dolor
+            animi ab dolores tempore exercitationem! Veritatis, et, explicabo.
+          </p>
+          <p class="text-base text-body-color mb-8">
+            Saepe autem voluptates, quibusdam, quis provident hic, ab tenetur placeat numquam
+            maxime, amet sunt rerum. Nemo distinctio alias inventore rem doloribus, nostrum magni
+            natus illo reprehenderit provident pariatur explicabo officia.
+          </p>
+          <p class="text-base text-body-color mb-8">
+            Excepturi, iure, unde. Eos fugiat quos aperiam fuga minima esse quisquam corrupti dolore
+            tempora ad ex nulla, explicabo, fugit reiciendis quaerat beatae ea voluptate delectus
+            distinctio consequatur quo totam laborum!
+          </p>
+          <p class="text-base text-body-color mb-8">
+            Necessitatibus officiis, dolorem ratione voluptatum quas explicabo mollitia quis, porro
+            maxime doloribus ab iste dolorum esse, cumque aliquid assumenda repellat voluptatem aut
+            et! Placeat perferendis reprehenderit, cumque iste tempore aut.
+          </p>
+        </article>
+
+        <article id="b">
+          <h4 class="text-2xl font-bold text-dark mb-4">Section B has four paragraphs.</h4>
+          <p class="text-base text-body-color mb-8">
+            Section B has four paragraphs. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            Ut doloribus beatae vel illum mollitia fugiat modi aperiam excepturi natus quisquam ab
+            molestias, expedita distinctio, ea totam harum quo illo soluta.
+          </p>
+          <p class="text-base text-body-color mb-8">
+            Eligendi porro fuga velit libero suscipit temporibus repellendus facilis molestias,
+            eaque modi reiciendis aut incidunt voluptas saepe assumenda omnis aperiam ex, dolor
+            animi ab dolores tempore exercitationem! Veritatis, et, explicabo.
+          </p>
+          <p class="text-base text-body-color mb-8">
+            Saepe autem voluptates, quibusdam, quis provident hic, ab tenetur placeat numquam
+            maxime, amet sunt rerum. Nemo distinctio alias inventore rem doloribus, nostrum magni
+            natus illo reprehenderit provident pariatur explicabo officia.
+          </p>
+          <p class="text-base text-body-color">
+            Excepturi, iure, unde. Eos fugiat quos aperiam fuga minima esse quisquam corrupti dolore
+            tempora ad ex nulla, explicabo, fugit reiciendis quaerat beatae ea voluptate delectus
+            distinctio consequatur quo totam laborum!
+          </p>
+        </article>
+
+        <article id="c" class="py-8">
+          <div class="j-list flex flex-wrap justify-between items-center">
+            <div class="flex justify-left">
+              <ul class="list-1 bg-white rounded-lg w-96 text-gray-900">
+                <li class="px-6 py-2 border-b border-gray-200 w-full rounded-t-lg">An item</li>
+                <li class="px-6 py-2 border-b border-gray-200 w-full">A second item</li>
+                <li class="px-6 py-2 border-b border-gray-200 w-full">A third item</li>
+                <li class="px-6 py-2 border-b border-gray-200 w-full">A fourth item</li>
+                <li class="px-6 py-2 w-full rounded-b-lg">And a fifth one</li>
+              </ul>
+            </div>
+            <div class="flex justify-center">
+              <div class="bg-white rounded-lg border border-gray-200 w-96 text-gray-900">
+                <button
+                  aria-current="true"
+                  type="button"
+                  class="text-left px-6 py-2 border-b border-gray-200 w-full rounded-t-lg bg-blue-600 text-white cursor-pointer"
+                >
+                  The current link item
+                </button>
+                <button
+                  type="button"
+                  class="text-left px-6 py-2 border-b border-gray-200 w-full hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-0 focus:bg-gray-200 focus:text-gray-600 transition duration-500 cursor-pointer"
+                >
+                  A second link item
+                </button>
+                <button
+                  type="button"
+                  class="text-left px-6 py-2 border-b border-gray-200 w-full hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-0 focus:bg-gray-200 focus:text-gray-600 transition duration-500 cursor-pointer"
+                >
+                  A third link item
+                </button>
+                <button
+                  type="button"
+                  class="text-left px-6 py-2 border-b border-gray-200 w-full hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-0 focus:bg-gray-200 focus:text-gray-600 transition duration-500 cursor-pointer"
+                >
+                  A fourth link item
+                </button>
+                <button
+                  disabled=""
+                  type="button"
+                  class="text-left px-6 py-2 border-gray-200 w-full rounded-b-lg focus:outline-none focus:ring-0 text-gray-400 cursor-default"
+                >
+                  A disabled link item
+                </button>
+              </div>
+            </div>
+            <div class="flex justify-center">
+              <ul class="bg-white rounded-lg w-96 text-gray-900">
+                <li class="px-6 py-2 border-b border-gray-200 w-full rounded-t-lg">An item</li>
+                <li class="px-6 py-2 border-b border-gray-200 w-full">A second item</li>
+                <li class="px-6 py-2 border-b border-gray-200 w-full">A third item</li>
+                <li class="px-6 py-2 border-b border-gray-200 w-full">A fourth item</li>
+                <li class="px-6 py-2 w-full rounded-b-lg">And a fifth one</li>
+              </ul>
+            </div>
+          </div>
+        </article>
+
+        <article id="d"></article>
+      </div>
+    </section>
+
+    <!-- ABOUT ME -->
+    <section class="about container py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
+      <div class="j-about container mx-auto">
+        <div class="flex flex-wrap justify-between items-center -mx-4">
+          <div class="w-full lg:w-6/12 px-4">
+            <div class="flex items-center -mx-3 sm:-mx-4">
+              <div class="w-full xl:w-1/2 px-3 sm:px-4">
+                <div class="keki py-3 sm:py-4">
+                  <img
+                    src="https://cdn.tailgrids.com/1.0/assets/images/services/image-1.jpg"
+                    alt=""
+                    class="first k-img rounded-2xl w-full"
+                  />
+                </div>
+                <div class="keki py-3 sm:py-4">
+                  <img
+                    src="https://cdn.tailgrids.com/1.0/assets/images/services/image-2.jpg"
+                    alt=""
+                    class="k-img rounded-2xl w-full"
+                  />
+                </div>
+              </div>
+              <div class="w-full xl:w-1/2 px-3 sm:px-4">
+                <div class="keki my-4 relative z-10">
+                  <img
+                    src="https://cdn.tailgrids.com/1.0/assets/images/services/image-3.jpg"
+                    alt=""
+                    class="k-img rounded-2xl w-full"
+                  />
+                  <span class="absolute -right-7 -bottom-7 z-[-1]">
+                    <svg
+                      width="134"
+                      height="106"
+                      viewBox="0 0 134 106"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <circle
+                        cx="1.66667"
+                        cy="104"
+                        r="1.66667"
+                        transform="rotate(-90 1.66667 104)"
+                        fill="#3056D3"
+                      />
+                      <circle
+                        cx="16.3333"
+                        cy="104"
+                        r="1.66667"
+                        transform="rotate(-90 16.3333 104)"
+                        fill="#3056D3"
+                      />
+                      <circle
+                        cx="31"
+                        cy="104"
+                        r="1.66667"
+                        transform="rotate(-90 31 104)"
+                        fill="#3056D3"
+                      />
+                      <circle
+                        cx="45.6667"
+                        cy="104"
+                        r="1.66667"
+                        transform="rotate(-90 45.6667 104)"
+                        fill="#3056D3"
+                      />
+                      <circle
+                        cx="60.3334"
+                        cy="104"
+                        r="1.66667"
+                        transform="rotate(-90 60.3334 104)"
+                        fill="#3056D3"
+                      />
+                      <circle
+                        cx="88.6667"
+                        cy="104"
+                        r="1.66667"
+                        transform="rotate(-90 88.6667 104)"
+                        fill="#3056D3"
+                      />
+                      <circle
+                        cx="117.667"
+                        cy="104"
+                        r="1.66667"
+                        transform="rotate(-90 117.667 104)"
+                        fill="#3056D3"
+                      />
+                      <circle
+                        cx="74.6667"
+                        cy="104"
+                        r="1.66667"
+                        transform="rotate(-90 74.6667 104)"
+                        fill="#3056D3"
+                      />
+                      <circle
+                        cx="103"
+                        cy="104"
+                        r="1.66667"
+                        transform="rotate(-90 103 104)"
+                        fill="#3056D3"
+                      />
+                      <circle
+                        cx="132"
+                        cy="104"
+                        r="1.66667"
+                        transform="rotate(-90 132 104)"
+                        fill="#3056D3"
+                      />
+                      <circle
+                        cx="1.66667"
+                        cy="89.3333"
+                        r="1.66667"
+                        transform="rotate(-90 1.66667 89.3333)"
+                        fill="#3056D3"
+                      />
+                      <circle
+                        cx="16.3333"
+                        cy="89.3333"
+                        r="1.66667"
+                        transform="rotate(-90 16.3333 89.3333)"
+                        fill="#3056D3"
+                      />
+                      <circle
+                        cx="31"
+                        cy="89.3333"
+                        r="1.66667"
+                        transform="rotate(-90 31 89.3333)"
+                        fill="#3056D3"
+                      />
+                      <circle
+                        cx="45.6667"
+                        cy="89.3333"
+                        r="1.66667"
+                        transform="rotate(-90 45.6667 89.3333)"
+                        fill="#3056D3"
+                      />
+                      <circle
+                        cx="60.3333"
+                        cy="89.3338"
+                        r="1.66667"
+                        transform="rotate(-90 60.3333 89.3338)"
+                        fill="#3056D3"
+                      />
+                      <circle
+                        cx="88.6667"
+                        cy="89.3338"
+                        r="1.66667"
+                        transform="rotate(-90 88.6667 89.3338)"
+                        fill="#3056D3"
+                      />
+                      <circle
+                        cx="117.667"
+                        cy="89.3338"
+                        r="1.66667"
+                        transform="rotate(-90 117.667 89.3338)"
+                        fill="#3056D3"
+                      />
+                      <circle
+                        cx="74.6667"
+                        cy="89.3338"
+                        r="1.66667"
+                        transform="rotate(-90 74.6667 89.3338)"
+                        fill="#3056D3"
+                      />
+                      <circle
+                        cx="103"
+                        cy="89.3338"
+                        r="1.66667"
+                        transform="rotate(-90 103 89.3338)"
+                        fill="#3056D3"
+                      />
+                      <circle
+                        cx="132"
+                        cy="89.3338"
+                        r="1.66667"
+                        transform="rotate(-90 132 89.3338)"
+                        fill="#3056D3"
+                      />
+                      <circle
+                        cx="1.66667"
+                        cy="74.6673"
+                        r="1.66667"
+                        transform="rotate(-90 1.66667 74.6673)"
+                        fill="#3056D3"
+                      />
+                      <circle
+                        cx="1.66667"
+                        cy="31.0003"
+                        r="1.66667"
+                        transform="rotate(-90 1.66667 31.0003)"
+                        fill="#3056D3"
+                      />
+                      <circle
+                        cx="16.3333"
+                        cy="74.6668"
+                        r="1.66667"
+                        transform="rotate(-90 16.3333 74.6668)"
+                        fill="#3056D3"
+                      />
+                      <circle
+                        cx="16.3333"
+                        cy="31.0003"
+                        r="1.66667"
+                        transform="rotate(-90 16.3333 31.0003)"
+                        fill="#3056D3"
+                      />
+                      <circle
+                        cx="31"
+                        cy="74.6668"
+                        r="1.66667"
+                        transform="rotate(-90 31 74.6668)"
+                        fill="#3056D3"
+                      />
+                      <circle
+                        cx="31"
+                        cy="31.0003"
+                        r="1.66667"
+                        transform="rotate(-90 31 31.0003)"
+                        fill="#3056D3"
+                      />
+                      <circle
+                        cx="45.6667"
+                        cy="74.6668"
+                        r="1.66667"
+                        transform="rotate(-90 45.6667 74.6668)"
+                        fill="#3056D3"
+                      />
+                      <circle
+                        cx="45.6667"
+                        cy="31.0003"
+                        r="1.66667"
+                        transform="rotate(-90 45.6667 31.0003)"
+                        fill="#3056D3"
+                      />
+                      <circle
+                        cx="60.3333"
+                        cy="74.6668"
+                        r="1.66667"
+                        transform="rotate(-90 60.3333 74.6668)"
+                        fill="#3056D3"
+                      />
+                      <circle
+                        cx="60.3333"
+                        cy="30.9998"
+                        r="1.66667"
+                        transform="rotate(-90 60.3333 30.9998)"
+                        fill="#3056D3"
+                      />
+                      <circle
+                        cx="88.6667"
+                        cy="74.6668"
+                        r="1.66667"
+                        transform="rotate(-90 88.6667 74.6668)"
+                        fill="#3056D3"
+                      />
+                      <circle
+                        cx="88.6667"
+                        cy="30.9998"
+                        r="1.66667"
+                        transform="rotate(-90 88.6667 30.9998)"
+                        fill="#3056D3"
+                      />
+                      <circle
+                        cx="117.667"
+                        cy="74.6668"
+                        r="1.66667"
+                        transform="rotate(-90 117.667 74.6668)"
+                        fill="#3056D3"
+                      />
+                      <circle
+                        cx="117.667"
+                        cy="30.9998"
+                        r="1.66667"
+                        transform="rotate(-90 117.667 30.9998)"
+                        fill="#3056D3"
+                      />
+                      <circle
+                        cx="74.6667"
+                        cy="74.6668"
+                        r="1.66667"
+                        transform="rotate(-90 74.6667 74.6668)"
+                        fill="#3056D3"
+                      />
+                      <circle
+                        cx="74.6667"
+                        cy="30.9998"
+                        r="1.66667"
+                        transform="rotate(-90 74.6667 30.9998)"
+                        fill="#3056D3"
+                      />
+                      <circle
+                        cx="103"
+                        cy="74.6668"
+                        r="1.66667"
+                        transform="rotate(-90 103 74.6668)"
+                        fill="#3056D3"
+                      />
+                      <circle
+                        cx="103"
+                        cy="30.9998"
+                        r="1.66667"
+                        transform="rotate(-90 103 30.9998)"
+                        fill="#3056D3"
+                      />
+                      <circle
+                        cx="132"
+                        cy="74.6668"
+                        r="1.66667"
+                        transform="rotate(-90 132 74.6668)"
+                        fill="#3056D3"
+                      />
+                      <circle
+                        cx="132"
+                        cy="30.9998"
+                        r="1.66667"
+                        transform="rotate(-90 132 30.9998)"
+                        fill="#3056D3"
+                      />
+                      <circle
+                        cx="1.66667"
+                        cy="60.0003"
+                        r="1.66667"
+                        transform="rotate(-90 1.66667 60.0003)"
+                        fill="#3056D3"
+                      />
+                      <circle
+                        cx="1.66667"
+                        cy="16.3333"
+                        r="1.66667"
+                        transform="rotate(-90 1.66667 16.3333)"
+                        fill="#3056D3"
+                      />
+                      <circle
+                        cx="16.3333"
+                        cy="60.0003"
+                        r="1.66667"
+                        transform="rotate(-90 16.3333 60.0003)"
+                        fill="#3056D3"
+                      />
+                      <circle
+                        cx="16.3333"
+                        cy="16.3333"
+                        r="1.66667"
+                        transform="rotate(-90 16.3333 16.3333)"
+                        fill="#3056D3"
+                      />
+                      <circle
+                        cx="31"
+                        cy="60.0003"
+                        r="1.66667"
+                        transform="rotate(-90 31 60.0003)"
+                        fill="#3056D3"
+                      />
+                      <circle
+                        cx="31"
+                        cy="16.3333"
+                        r="1.66667"
+                        transform="rotate(-90 31 16.3333)"
+                        fill="#3056D3"
+                      />
+                      <circle
+                        cx="45.6667"
+                        cy="60.0003"
+                        r="1.66667"
+                        transform="rotate(-90 45.6667 60.0003)"
+                        fill="#3056D3"
+                      />
+                      <circle
+                        cx="45.6667"
+                        cy="16.3333"
+                        r="1.66667"
+                        transform="rotate(-90 45.6667 16.3333)"
+                        fill="#3056D3"
+                      />
+                      <circle
+                        cx="60.3333"
+                        cy="60.0003"
+                        r="1.66667"
+                        transform="rotate(-90 60.3333 60.0003)"
+                        fill="#3056D3"
+                      />
+                      <circle
+                        cx="60.3333"
+                        cy="16.3333"
+                        r="1.66667"
+                        transform="rotate(-90 60.3333 16.3333)"
+                        fill="#3056D3"
+                      />
+                      <circle
+                        cx="88.6667"
+                        cy="60.0003"
+                        r="1.66667"
+                        transform="rotate(-90 88.6667 60.0003)"
+                        fill="#3056D3"
+                      />
+                      <circle
+                        cx="88.6667"
+                        cy="16.3333"
+                        r="1.66667"
+                        transform="rotate(-90 88.6667 16.3333)"
+                        fill="#3056D3"
+                      />
+                      <circle
+                        cx="117.667"
+                        cy="60.0003"
+                        r="1.66667"
+                        transform="rotate(-90 117.667 60.0003)"
+                        fill="#3056D3"
+                      />
+                      <circle
+                        cx="117.667"
+                        cy="16.3333"
+                        r="1.66667"
+                        transform="rotate(-90 117.667 16.3333)"
+                        fill="#3056D3"
+                      />
+                      <circle
+                        cx="74.6667"
+                        cy="60.0003"
+                        r="1.66667"
+                        transform="rotate(-90 74.6667 60.0003)"
+                        fill="#3056D3"
+                      />
+                      <circle
+                        cx="74.6667"
+                        cy="16.3333"
+                        r="1.66667"
+                        transform="rotate(-90 74.6667 16.3333)"
+                        fill="#3056D3"
+                      />
+                      <circle
+                        cx="103"
+                        cy="60.0003"
+                        r="1.66667"
+                        transform="rotate(-90 103 60.0003)"
+                        fill="#3056D3"
+                      />
+                      <circle
+                        cx="103"
+                        cy="16.3333"
+                        r="1.66667"
+                        transform="rotate(-90 103 16.3333)"
+                        fill="#3056D3"
+                      />
+                      <circle
+                        cx="132"
+                        cy="60.0003"
+                        r="1.66667"
+                        transform="rotate(-90 132 60.0003)"
+                        fill="#3056D3"
+                      />
+                      <circle
+                        cx="132"
+                        cy="16.3333"
+                        r="1.66667"
+                        transform="rotate(-90 132 16.3333)"
+                        fill="#3056D3"
+                      />
+                      <circle
+                        cx="1.66667"
+                        cy="45.3333"
+                        r="1.66667"
+                        transform="rotate(-90 1.66667 45.3333)"
+                        fill="#3056D3"
+                      />
+                      <circle
+                        cx="1.66667"
+                        cy="1.66683"
+                        r="1.66667"
+                        transform="rotate(-90 1.66667 1.66683)"
+                        fill="#3056D3"
+                      />
+                      <circle
+                        cx="16.3333"
+                        cy="45.3333"
+                        r="1.66667"
+                        transform="rotate(-90 16.3333 45.3333)"
+                        fill="#3056D3"
+                      />
+                      <circle
+                        cx="16.3333"
+                        cy="1.66683"
+                        r="1.66667"
+                        transform="rotate(-90 16.3333 1.66683)"
+                        fill="#3056D3"
+                      />
+                      <circle
+                        cx="31"
+                        cy="45.3333"
+                        r="1.66667"
+                        transform="rotate(-90 31 45.3333)"
+                        fill="#3056D3"
+                      />
+                      <circle
+                        cx="31"
+                        cy="1.66683"
+                        r="1.66667"
+                        transform="rotate(-90 31 1.66683)"
+                        fill="#3056D3"
+                      />
+                      <circle
+                        cx="45.6667"
+                        cy="45.3333"
+                        r="1.66667"
+                        transform="rotate(-90 45.6667 45.3333)"
+                        fill="#3056D3"
+                      />
+                      <circle
+                        cx="45.6667"
+                        cy="1.66683"
+                        r="1.66667"
+                        transform="rotate(-90 45.6667 1.66683)"
+                        fill="#3056D3"
+                      />
+                      <circle
+                        cx="60.3333"
+                        cy="45.3338"
+                        r="1.66667"
+                        transform="rotate(-90 60.3333 45.3338)"
+                        fill="#3056D3"
+                      />
+                      <circle
+                        cx="60.3333"
+                        cy="1.66683"
+                        r="1.66667"
+                        transform="rotate(-90 60.3333 1.66683)"
+                        fill="#3056D3"
+                      />
+                      <circle
+                        cx="88.6667"
+                        cy="45.3338"
+                        r="1.66667"
+                        transform="rotate(-90 88.6667 45.3338)"
+                        fill="#3056D3"
+                      />
+                      <circle
+                        cx="88.6667"
+                        cy="1.66683"
+                        r="1.66667"
+                        transform="rotate(-90 88.6667 1.66683)"
+                        fill="#3056D3"
+                      />
+                      <circle
+                        cx="117.667"
+                        cy="45.3338"
+                        r="1.66667"
+                        transform="rotate(-90 117.667 45.3338)"
+                        fill="#3056D3"
+                      />
+                      <circle
+                        cx="117.667"
+                        cy="1.66683"
+                        r="1.66667"
+                        transform="rotate(-90 117.667 1.66683)"
+                        fill="#3056D3"
+                      />
+                      <circle
+                        cx="74.6667"
+                        cy="45.3338"
+                        r="1.66667"
+                        transform="rotate(-90 74.6667 45.3338)"
+                        fill="#3056D3"
+                      />
+                      <circle
+                        cx="74.6667"
+                        cy="1.66683"
+                        r="1.66667"
+                        transform="rotate(-90 74.6667 1.66683)"
+                        fill="#3056D3"
+                      />
+                      <circle
+                        cx="103"
+                        cy="45.3338"
+                        r="1.66667"
+                        transform="rotate(-90 103 45.3338)"
+                        fill="#3056D3"
+                      />
+                      <circle
+                        cx="103"
+                        cy="1.66683"
+                        r="1.66667"
+                        transform="rotate(-90 103 1.66683)"
+                        fill="#3056D3"
+                      />
+                      <circle
+                        cx="132"
+                        cy="45.3338"
+                        r="1.66667"
+                        transform="rotate(-90 132 45.3338)"
+                        fill="#3056D3"
+                      />
+                      <circle
+                        cx="132"
+                        cy="1.66683"
+                        r="1.66667"
+                        transform="rotate(-90 132 1.66683)"
+                        fill="#3056D3"
+                      />
+                    </svg>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="w-full lg:w-1/2 xl:w-5/12 px-4">
+            <div class="mt-10 lg:mt-0">
+              <span class="font-semibold text-lg text-primary mb-2 block"> Why Choose Us </span>
+              <h2 class="font-bold text-3xl sm:text-4xl text-dark mb-8">
+                Make your customers happy by giving services.
+              </h2>
+              <p class="text-base text-body-color mb-8">
+                It is a long established fact that a reader will be distracted by the readable
+                content of a page when looking at its layout. The point of using Lorem Ipsum is that
+                it has a more-or-less.
+              </p>
+              <p class="text-base text-body-color mb-12">
+                A domain name is one of the first steps to establishing your brand. Secure a
+                consistent brand image with a domain name that matches your business.
+              </p>
+              <a
+                href="javascript:void(0)"
+                class="py-4 px-10 lg:px-8 xl:px-10 inline-flex items-center justify-center text-center text-white text-base bg-primary hover:bg-opacity-90 font-normal rounded-lg"
+              >
+                Get Started
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- USERS are Fetched from and external API -->
+    <section class="py-8">
+      <div class="container px-4 mx-auto">
+        <div class="j-user-cont flex flex-wrap -m-4"></div>
+      </div>
+    </section>
+
+    <!-- SLIDESHOW -->
+    <div class="relative w-[100rem] h-[40rem] mx-auto overflow-hidden">
+      <div class="slide w-full h-[40rem] absolute top-0">
+        <img
+          class="w-full h-full object-cover"
+          src="https://www.kindacode.com/wp-content/uploads/2022/07/flower-1.jpeg"
+        />
+        <div class="absolute bottom-0 w-full px-5 py-3 bg-black/40 text-center text-white">
+          Flower One Caption
+        </div>
+      </div>
+
+      <div class="slide w-full h-[40rem] absolute top-0">
+        <img
+          class="w-full h-full object-cover"
+          src="https://www.kindacode.com/wp-content/uploads/2022/07/flower-2.jpeg"
+        />
+        <div class="absolute bottom-0 w-full px-5 py-3 bg-black/40 text-center text-white">
+          Flower Two Caption
+        </div>
+      </div>
+
+      <div class="slide slide w-full h-[40rem] absolute top-0">
+        <img
+          class="w-full h-full object-cover"
+          src="https://www.kindacode.com/wp-content/uploads/2022/07/flower-3.jpeg"
+        />
+        <div class="absolute bottom-0 w-full px-5 py-3 bg-black/40 text-center text-white">
+          Flower Three Caption
+        </div>
+      </div>
+
+      <!-- The previous button -->
+      <a
+        class="j-prev absolute left-0 top-1/2 p-4 -translate-y-1/2 bg-black/30 hover:bg-black/50 text-white hover:text-amber-500 cursor-pointer"
+        >❮ previous</a
+      >
+
+      <!-- The next button -->
+      <a
+        class="j-next absolute right-0 top-1/2 p-4 -translate-y-1/2 bg-black/30 hover:bg-black/50 text-white hover:text-amber-500 cursor-pointer"
+        >next ❯</a
+      >
+
+      <br />
+
+      <!-- The dots -->
+      <div class="j-dots flex justify-center items-center space-x-5">
+        <!-- <div class="dot w-4 h-4 rounded-full cursor-pointer"></div>
+      <div class="dot w-4 h-4 rounded-full cursor-pointer"></div>
+      <div class="dot w-4 h-4 rounded-full cursor-pointer"></div> -->
+      </div>
+    </div>
+    <!-- Features -->
+    <section class="bg-white">
+      <div class="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
+        <div class="max-w-screen-md mb-8 lg:mb-16">
+          <h2 class="mb-4 text-4xl font-extrabold text-gray-900 text-gray-400">
+            Designed for business teams like yours
+          </h2>
+          <p class="text-gray-500 sm:text-xl dark:text-gray-400">
+            Here we focus on markets where technology, innovation, and capital can unlock long-term
+            value and drive economic growth.
+          </p>
+        </div>
+        <div
+          class="j-features space-y-8 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-12 md:space-y-0"
+        >
+          <div>
+            <div
+              class="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-primary-100 lg:h-12 lg:w-12 dark:bg-primary-900"
+            >
+              <svg
+                class="w-5 h-5 text-primary-600 lg:w-6 lg:h-6 dark:text-primary-300"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M3 3a1 1 0 000 2v8a2 2 0 002 2h2.586l-1.293 1.293a1 1 0 101.414 1.414L10 15.414l2.293 2.293a1 1 0 001.414-1.414L12.414 15H15a2 2 0 002-2V5a1 1 0 100-2H3zm11.707 4.707a1 1 0 00-1.414-1.414L10 9.586 8.707 8.293a1 1 0 00-1.414 0l-2 2a1 1 0 101.414 1.414L8 10.414l1.293 1.293a1 1 0 001.414 0l4-4z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+            </div>
+            <h3 class="mb-2 text-xl font-bold text-gray-400">Marketing</h3>
+            <p class="text-gray-500 dark:text-gray-400">
+              Plan it, create it, launch it. Collaborate seamlessly with all the organization and
+              hit your marketing goals every month with our marketing plan.
+            </p>
+          </div>
+          <div>
+            <div
+              class="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-primary-100 lg:h-12 lg:w-12 dark:bg-primary-900"
+            >
+              <svg
+                class="w-5 h-5 text-primary-600 lg:w-6 lg:h-6 dark:text-primary-300"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2-.712V17a1 1 0 001 1z"
+                ></path>
+              </svg>
+            </div>
+            <h3 class="mb-2 text-xl font-bold text-gray-400">Legal</h3>
+            <p class="text-gray-500 dark:text-gray-400">
+              Protect your organization, devices and stay compliant with our structured workflows
+              and custom permissions made for you.
+            </p>
+          </div>
+          <div>
+            <div
+              class="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-primary-100 lg:h-12 lg:w-12 dark:bg-primary-900"
+            >
+              <svg
+                class="w-5 h-5 text-primary-600 lg:w-6 lg:h-6 dark:text-primary-300"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M6 6V5a3 3 0 013-3h2a3 3 0 013 3v1h2a2 2 0 012 2v3.57A22.952 22.952 0 0110 13a22.95 22.95 0 01-8-1.43V8a2 2 0 012-2h2zm2-1a1 1 0 011-1h2a1 1 0 011 1v1H8V5zm1 5a1 1 0 011-1h.01a1 1 0 110 2H10a1 1 0 01-1-1z"
+                  clip-rule="evenodd"
+                ></path>
+                <path
+                  d="M2 13.692V16a2 2 0 002 2h12a2 2 0 002-2v-2.308A24.974 24.974 0 0110 15c-2.796 0-5.487-.46-8-1.308z"
+                ></path>
+              </svg>
+            </div>
+            <h3 class="mb-2 text-xl font-bold text-gray-400">Business Automation</h3>
+            <p class="text-gray-500 dark:text-gray-400">
+              Auto-assign tasks, send Slack messages, and much more. Now power up with hundreds of
+              new templates to help you get started.
+            </p>
+          </div>
+          <div>
+            <div
+              class="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-primary-100 lg:h-12 lg:w-12 dark:bg-primary-900"
+            >
+              <svg
+                class="w-5 h-5 text-primary-600 lg:w-6 lg:h-6 dark:text-primary-300"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M8.433 7.418c.155-.103.346-.196.567-.267v1.698a2.305 2.305 0 01-.567-.267C8.07 8.34 8 8.114 8 8c0-.114.07-.34.433-.582zM11 12.849v-1.698c.22.071.412.164.567.267.364.243.433.468.433.582 0 .114-.07.34-.433.582a2.305 2.305 0 01-.567.267z"
+                ></path>
+                <path
+                  fill-rule="evenodd"
+                  d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-13a1 1 0 10-2 0v.092a4.535 4.535 0 00-1.676.662C6.602 6.234 6 7.009 6 8c0 .99.602 1.765 1.324 2.246.48.32 1.054.545 1.676.662v1.941c-.391-.127-.68-.317-.843-.504a1 1 0 10-1.51 1.31c.562.649 1.413 1.076 2.353 1.253V15a1 1 0 102 0v-.092a4.535 4.535 0 001.676-.662C13.398 13.766 14 12.991 14 12c0-.99-.602-1.765-1.324-2.246A4.535 4.535 0 0011 9.092V7.151c.391.127.68.317.843.504a1 1 0 101.511-1.31c-.563-.649-1.413-1.076-2.354-1.253V5z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+            </div>
+            <h3 class="mb-2 text-xl font-bold text-gray-400">Finance</h3>
+            <p class="text-gray-500 dark:text-gray-400">
+              Audit-proof software built for critical financial operations like month-end close and
+              quarterly budgeting.
+            </p>
+          </div>
+          <div>
+            <div
+              class="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-primary-100 lg:h-12 lg:w-12 dark:bg-primary-900"
+            >
+              <svg
+                class="w-5 h-5 text-primary-600 lg:w-6 lg:h-6 dark:text-primary-300"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M7 3a1 1 0 000 2h6a1 1 0 100-2H7zM4 7a1 1 0 011-1h10a1 1 0 110 2H5a1 1 0 01-1-1zM2 11a2 2 0 012-2h12a2 2 0 012 2v4a2 2 0 01-2 2H4a2 2 0 01-2-2v-4z"
+                ></path>
+              </svg>
+            </div>
+            <h3 class="mb-2 text-xl font-bold text-gray-400">Enterprise Design</h3>
+            <p class="text-gray-500 dark:text-gray-400">
+              Craft beautiful, delightful experiences for both marketing and product with real
+              cross-company collaboration.
+            </p>
+          </div>
+
+          <div>
+            <div
+              class="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-primary-100 lg:h-12 lg:w-12 dark:bg-primary-900"
+            >
+              <svg
+                class="w-5 h-5 text-primary-600 lg:w-6 lg:h-6 dark:text-primary-300"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M11.49 3.17c-.38-1.56-2.6-1.56-2.98 0a1.532 1.532 0 01-2.286.948c-1.372-.836-2.942.734-2.106 2.106.54.886.061 2.042-.947 2.287-1.561.379-1.561 2.6 0 2.978a1.532 1.532 0 01.947 2.287c-.836 1.372.734 2.942 2.106 2.106a1.532 1.532 0 012.287.947c.379 1.561 2.6 1.561 2.978 0a1.533 1.533 0 012.287-.947c1.372.836 2.942-.734 2.106-2.106a1.533 1.533 0 01.947-2.287c1.561-.379 1.561-2.6 0-2.978a1.532 1.532 0 01-.947-2.287c.836-1.372-.734-2.942-2.106-2.106a1.532 1.532 0 01-2.287-.947zM10 13a3 3 0 100-6 3 3 0 000 6z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+            </div>
+            <h3 class="mb-2 text-xl font-bold text-gray-400">Operations</h3>
+            <p class="text-gray-500 dark:text-gray-400">
+              Keep your company’s lights on with customizable, iterative, and structured workflows
+              built for all efficient teams and individual.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- OUR TEAM -->
+    <section class="team bg-white dark:bg-gray-900">
+      <div class="j-team container px-6 py-10 mx-auto">
+        <h1
+          class="text-3xl font-semibold text-center text-gray-800 capitalize lg:text-4xl dark:text-white"
+        >
+          our team
+        </h1>
+
+        <p class="max-w-2xl mx-auto my-6 text-center text-gray-500 dark:text-gray-300">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo incidunt ex placeat modi
+          magni quia error alias, adipisci rem similique, at omnis eligendi optio eos harum.
+        </p>
+
+        <div class="flex items-center justify-center">
+          <div
+            class="js-tabcont flex items-center p-1 border border-blue-600 dark:border-blue-400 rounded-xl"
+          >
+            <button
+              class="js-tab active bg-blue-600 text-sm text-white px-4 py-2 font-medium capitalize md:py-3 dark:hover:text-white focus:outline-none hover:bg-blue-600 hover:text-white rounded-xl md:px-12"
+            >
+              all
+            </button>
+            <button
+              class="js-tab px-4 py-2 text-sm font-medium text-blue-600 capitalize md:py-3 dark:text-blue-400 dark:hover:text-white focus:outline-none hover:bg-blue-600 hover:text-white rounded-xl md:px-12"
+            >
+              marketing
+            </button>
+            <button
+              class="js-tab px-4 py-2 text-sm font-medium text-blue-600 capitalize md:py-3 dark:text-blue-400 dark:hover:text-white focus:outline-none hover:bg-blue-600 hover:text-white rounded-xl md:px-12"
+            >
+              design
+            </button>
+            <button
+              class="js-tab px-4 py-2 mx-4 text-sm font-medium text-blue-600 capitalize md:py-3 dark:text-blue-400 dark:hover:text-white focus:outline-none hover:bg-blue-600 hover:text-white rounded-xl md:mx-8 md:px-12"
+            >
+              development
+            </button>
+          </div>
+        </div>
+
+        <div class="js-cont grid grid-cols-1 gap-8 mt-8 xl:mt-16 md:grid-cols-2 xl:grid-cols-4">
+          <div
+            class="js-content content-design flex flex-col items-center p-8 transition-colors duration-200 transform border cursor-pointer rounded-xl hover:border-transparent group hover:bg-blue-600 dark:border-gray-700 dark:hover:border-transparent"
+            data-filter="design"
+          >
+            <img
+              class="object-cover w-32 h-32 rounded-full ring-4 ring-gray-300"
+              src="/img/pf-1.jpg"
+              alt=""
+            />
+
+            <h1
+              class="mt-4 text-2xl font-semibold text-gray-700 capitalize dark:text-white group-hover:text-white"
+            >
+              arthur melo
+            </h1>
+
+            <p class="mt-2 text-gray-500 capitalize dark:text-gray-300 group-hover:text-gray-300">
+              designer
+            </p>
+
+            <div class="flex mt-3 -mx-2">
+              <a
+                href="#"
+                class="mx-2 text-gray-600 dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-300 group-hover:text-white"
+                aria-label="Reddit"
+              >
+                <i class="w-6 h-6 fa-brands fa-facebook"></i>
+              </a>
+
+              <a
+                href="#"
+                class="mx-2 text-gray-600 dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-300 group-hover:text-white"
+                aria-label="Facebook"
+              >
+                <i class="w-6 h-6 fa-brands fa-github"></i>
+              </a>
+
+              <a
+                href="#"
+                class="mx-2 text-gray-600 dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-300 group-hover:text-white"
+                aria-label="Github"
+              >
+                <i class="w-6 h-6 fa-brands fa-twitter"></i>
+              </a>
+            </div>
+          </div>
+
+          <div
+            class="js-content content-develop flex flex-col items-center p-8 transition-colors duration-200 transform border cursor-pointer rounded-xl hover:border-transparent group hover:bg-blue-600 dark:border-gray-700 dark:hover:border-transparent"
+            data-filter="development"
+          >
+            <img
+              class="object-cover w-32 h-32 rounded-full ring-4 ring-gray-300"
+              src="/img/pf-2.jpg"
+              alt=""
+            />
+
+            <h1
+              class="mt-4 text-2xl font-semibold text-gray-700 capitalize dark:text-white group-hover:text-white"
+            >
+              Amelia. Anderson
+            </h1>
+
+            <p class="mt-2 text-gray-500 capitalize dark:text-gray-300 group-hover:text-gray-300">
+              Frontend Developer
+            </p>
+
+            <div class="flex mt-3 -mx-2">
+              <a
+                href="#"
+                class="mx-2 text-gray-600 dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-300 group-hover:text-white"
+                aria-label="Reddit"
+              >
+                <i class="w-6 h-6 fa-brands fa-facebook"></i>
+              </a>
+
+              <a
+                href="#"
+                class="mx-2 text-gray-600 dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-300 group-hover:text-white"
+                aria-label="Facebook"
+              >
+                <i class="w-6 h-6 fa-brands fa-github"></i>
+              </a>
+
+              <a
+                href="#"
+                class="mx-2 text-gray-600 dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-300 group-hover:text-white"
+                aria-label="Github"
+              >
+                <i class="w-6 h-6 fa-brands fa-twitter"></i>
+              </a>
+            </div>
+          </div>
+
+          <div
+            class="js-content content-design flex flex-col items-center p-8 transition-colors duration-200 transform border cursor-pointer rounded-xl hover:border-transparent group hover:bg-blue-600 dark:border-gray-700 dark:hover:border-transparent"
+            data-filter="design"
+          >
+            <img
+              class="object-cover w-32 h-32 rounded-full ring-4 ring-gray-300"
+              src="/img/pf-3.png"
+              alt=""
+            />
+
+            <h1
+              class="mt-4 text-2xl font-semibold text-gray-700 capitalize dark:text-white group-hover:text-white"
+            >
+              Olivia Wathan
+            </h1>
+
+            <p class="mt-2 text-gray-500 capitalize dark:text-gray-300 group-hover:text-gray-300">
+              UI Designer
+            </p>
+            <div class="flex mt-3 -mx-2">
+              <a
+                href="#"
+                class="mx-2 text-gray-600 dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-300 group-hover:text-white"
+                aria-label="Reddit"
+              >
+                <i class="w-6 h-6 fa-brands fa-facebook"></i>
+              </a>
+
+              <a
+                href="#"
+                class="mx-2 text-gray-600 dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-300 group-hover:text-white"
+                aria-label="Facebook"
+              >
+                <i class="w-6 h-6 fa-brands fa-github"></i>
+              </a>
+
+              <a
+                href="#"
+                class="mx-2 text-gray-600 dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-300 group-hover:text-white"
+                aria-label="Github"
+              >
+                <i class="w-6 h-6 fa-brands fa-twitter"></i>
+              </a>
+            </div>
+          </div>
+
+          <div
+            class="js-content content-develop flex flex-col items-center p-8 transition-colors duration-200 transform border cursor-pointer rounded-xl hover:border-transparent group hover:bg-blue-600 dark:border-gray-700 dark:hover:border-transparent"
+            data-filter="development"
+          >
+            <img
+              class="object-cover w-32 h-32 rounded-full ring-4 ring-gray-300"
+              src="/img/pf-4.png"
+              alt=""
+            />
+
+            <h1
+              class="mt-4 text-2xl font-semibold text-gray-700 capitalize dark:text-white group-hover:text-white"
+            >
+              John Doe
+            </h1>
+
+            <p class="mt-2 text-gray-500 capitalize dark:text-gray-300 group-hover:text-gray-300">
+              Full stack developer
+            </p>
+
+            <div class="flex mt-3 -mx-2">
+              <a
+                href="#"
+                class="mx-2 text-gray-600 dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-300 group-hover:text-white"
+                aria-label="Reddit"
+              >
+                <i class="w-6 h-6 fa-brands fa-facebook"></i>
+              </a>
+
+              <a
+                href="#"
+                class="mx-2 text-gray-600 dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-300 group-hover:text-white"
+                aria-label="Facebook"
+              >
+                <i class="w-6 h-6 fa-brands fa-github"></i>
+              </a>
+
+              <a
+                href="#"
+                class="mx-2 text-gray-600 dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-300 group-hover:text-white"
+                aria-label="Github"
+              >
+                <i class="w-6 h-6 fa-brands fa-twitter"></i>
+              </a>
+            </div>
+          </div>
+
+          <div
+            class="js-content content-marketing flex flex-col items-center p-8 transition-colors duration-200 transform border cursor-pointer rounded-xl hover:border-transparent group hover:bg-blue-600 dark:border-gray-700 dark:hover:border-transparent"
+            data-filter="marketing"
+          >
+            <img
+              class="object-cover w-32 h-32 rounded-full ring-4 ring-gray-300"
+              src="/img/pf-5.jpg"
+              alt=""
+            />
+
+            <h1
+              class="mt-4 text-2xl font-semibold text-gray-700 capitalize dark:text-white group-hover:text-white"
+            >
+              John Doe
+            </h1>
+
+            <p class="mt-2 text-gray-500 capitalize dark:text-gray-300 group-hover:text-gray-300">
+              Marketing Lead
+            </p>
+
+            <div class="flex mt-3 -mx-2">
+              <a
+                href="#"
+                class="mx-2 text-gray-600 dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-300 group-hover:text-white"
+                aria-label="Reddit"
+              >
+                <i class="w-6 h-6 fa-brands fa-facebook"></i>
+              </a>
+
+              <a
+                href="#"
+                class="mx-2 text-gray-600 dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-300 group-hover:text-white"
+                aria-label="Facebook"
+              >
+                <i class="w-6 h-6 fa-brands fa-github"></i>
+              </a>
+
+              <a
+                href="#"
+                class="mx-2 text-gray-600 dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-300 group-hover:text-white"
+                aria-label="Github"
+              >
+                <i class="w-6 h-6 fa-brands fa-twitter"></i>
+              </a>
+            </div>
+          </div>
+
+          <div
+            class="js-content content-design flex flex-col items-center p-8 transition-colors duration-200 transform border cursor-pointer rounded-xl hover:border-transparent group hover:bg-blue-600 dark:border-gray-700 dark:hover:border-transparent"
+            data-filter="design"
+          >
+            <img
+              class="object-cover w-32 h-32 rounded-full ring-4 ring-gray-300"
+              src="/img/pf-6.jpg"
+              alt=""
+            />
+
+            <h1
+              class="mt-4 text-2xl font-semibold text-gray-700 capitalize dark:text-white group-hover:text-white"
+            >
+              John Doe
+            </h1>
+
+            <p class="mt-2 text-gray-500 capitalize dark:text-gray-300 group-hover:text-gray-300">
+              design lead
+            </p>
+
+            <div class="flex mt-3 -mx-2">
+              <a
+                href="#"
+                class="mx-2 text-gray-600 dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-300 group-hover:text-white"
+                aria-label="Reddit"
+              >
+                <i class="w-6 h-6 fa-brands fa-facebook"></i>
+              </a>
+
+              <a
+                href="#"
+                class="mx-2 text-gray-600 dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-300 group-hover:text-white"
+                aria-label="Facebook"
+              >
+                <i class="w-6 h-6 fa-brands fa-github"></i>
+              </a>
+
+              <a
+                href="#"
+                class="mx-2 text-gray-600 dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-300 group-hover:text-white"
+                aria-label="Github"
+              >
+                <i class="w-6 h-6 fa-brands fa-twitter"></i>
+              </a>
+            </div>
+          </div>
+
+          <div
+            class="js-content content-develop flex flex-col items-center p-8 transition-colors duration-200 transform border cursor-pointer rounded-xl hover:border-transparent group hover:bg-blue-600 dark:border-gray-700 dark:hover:border-transparent"
+            data-filter="development"
+          >
+            <img
+              class="object-cover w-32 h-32 rounded-full ring-4 ring-gray-300"
+              src="/img/pf-7.png"
+              alt=""
+            />
+
+            <h1
+              class="mt-4 text-2xl font-semibold text-gray-700 capitalize dark:text-white group-hover:text-white"
+            >
+              John Doe
+            </h1>
+
+            <p class="mt-2 text-gray-500 capitalize dark:text-gray-300 group-hover:text-gray-300">
+              Full stack developer
+            </p>
+
+            <div class="flex mt-3 -mx-2">
+              <a
+                href="#"
+                class="mx-2 text-gray-600 dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-300 group-hover:text-white"
+                aria-label="Reddit"
+              >
+                <i class="w-6 h-6 fa-brands fa-facebook"></i>
+              </a>
+
+              <a
+                href="#"
+                class="mx-2 text-gray-600 dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-300 group-hover:text-white"
+                aria-label="Facebook"
+              >
+                <i class="w-6 h-6 fa-brands fa-github"></i>
+              </a>
+
+              <a
+                href="#"
+                class="mx-2 text-gray-600 dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-300 group-hover:text-white"
+                aria-label="Github"
+              >
+                <i class="w-6 h-6 fa-brands fa-twitter"></i>
+              </a>
+            </div>
+          </div>
+
+          <div
+            class="js-content content-marketing flex flex-col items-center p-8 transition-colors duration-200 transform border cursor-pointer rounded-xl hover:border-transparent group hover:bg-blue-600 dark:border-gray-700 dark:hover:border-transparent"
+            data-filter="marketing"
+          >
+            <img
+              class="object-cover w-32 h-32 rounded-full ring-4 ring-gray-300"
+              src="/img/pf-8.jpg"
+              alt=""
+            />
+
+            <h1
+              class="mt-4 text-2xl font-semibold text-gray-700 capitalize dark:text-white group-hover:text-white"
+            >
+              John Doe
+            </h1>
+
+            <p class="mt-2 text-gray-500 capitalize dark:text-gray-300 group-hover:text-gray-300">
+              Marketing
+            </p>
+
+            <div class="flex mt-3 -mx-2">
+              <a
+                href="#"
+                class="mx-2 text-gray-600 dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-300 group-hover:text-white"
+                aria-label="Reddit"
+              >
+                <i class="w-6 h-6 fa-brands fa-facebook"></i>
+              </a>
+
+              <a
+                href="#"
+                class="mx-2 text-gray-600 dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-300 group-hover:text-white"
+                aria-label="Facebook"
+              >
+                <i class="w-6 h-6 fa-brands fa-github"></i>
+              </a>
+
+              <a
+                href="#"
+                class="mx-2 text-gray-600 dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-300 group-hover:text-white"
+                aria-label="Github"
+              >
+                <i class="w-6 h-6 fa-brands fa-twitter"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- NEWSLETTER -->
+    <section class="bg-white dark:bg-gray-900">
+      <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
+        <div class="mx-auto max-w-screen-md sm:text-center">
+          <h2
+            class="mb-4 text-3xl tracking-tight font-extrabold text-gray-900 sm:text-4xl dark:text-white"
+          >
+            Sign up for our newsletter
+          </h2>
+          <p
+            class="mx-auto mb-8 max-w-2xl font-light text-gray-500 md:mb-12 sm:text-xl dark:text-gray-400"
+          >
+            Stay up to date with the roadmap progress, announcements and exclusive discounts feel
+            free to sign up with your email.
+          </p>
+          <form action="#">
+            <div class="items-center mx-auto mb-3 space-y-4 max-w-screen-sm sm:flex sm:space-y-0">
+              <div class="relative w-full">
+                <label
+                  for="email"
+                  class="hidden mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+                  >Email address</label
+                >
+                <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
+                  <svg
+                    class="w-5 h-5 text-gray-500 dark:text-gray-400"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"
+                    ></path>
+                    <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path>
+                  </svg>
+                </div>
+                <input
+                  class="block p-3 pl-10 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 sm:rounded-none sm:rounded-l-lg focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+                  placeholder="Enter your email"
+                  type="email"
+                  id="email"
+                  required=""
+                />
+              </div>
+              <div>
+                <button
+                  type="submit"
+                  class="py-3 px-5 w-full text-sm font-medium text-center text-white rounded-lg border cursor-pointer bg-primary-700 border-primary-600 sm:rounded-none sm:rounded-r-lg hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
+                >
+                  Subscribe
+                </button>
+              </div>
+            </div>
+            <div
+              class="mx-auto max-w-screen-sm text-sm text-left text-gray-500 newsletter-form-footer dark:text-gray-300"
+            >
+              We care about the protection of your data.
+              <a href="#" class="font-medium text-primary-600 dark:text-primary-500 hover:underline"
+                >Read our Privacy Policy</a
+              >.
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <%= require('../partials/footer.html?raw') %>
+  </body>
+</html>

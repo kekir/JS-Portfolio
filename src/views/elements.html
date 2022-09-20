@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= htmlWebpackPlugin.options.title %></title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+  </head>
+  <body class="is-preload">
+    <!-- Header -->
+    <%= require('../partials/header.html?raw') %>
+
+    <!-- TEXT STYLING -->
+    <section class="text margin-y-xl">
+      <div class="container max-width-md">
+        <div class="padding-bottom-md">
+          <h3>Text and Headings</h3>
+        </div>
+
+        <div class="text-component padding-bottom-md">
+          <h4 class="padding-x-sm">About the Text</h4>
+          <p class="padding-x-sm">
+            This is <b>bold</b> and this is <strong>strong</strong>. This is <i>italic</i> and this
+            is <em>emphasized</em>. This is <sup>superscript</sup> text and this is
+            <sub>subscript</sub> text. This is <u>underlined</u> and this is code:
+            <code>for (;;) { ... }</code>. Finally, <a href="#">this is a link</a>.
+          </p>
+        </div>
+
+        <div class="text-component padding-bottom-lg">
+          <h4 class="padding-x-sm">Heading with a Subtitle</h4>
+          <p class="padding-x-sm">Lorem ipsum dolor sit amet nullam id egestas urna aliquam</p>
+          <p class="padding-x-sm">
+            Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non
+            mi integer non faucibus ornare mi ut ante amet placerat aliquet. Volutpat eu sed ante
+            lacinia sapien lorem accumsan varius montes viverra nibh in adipiscing blandit tempus
+            accumsan.
+          </p>
+        </div>
+
+        <div class="text-component padding-bottom-lg">
+          <h5>Heading Level 5</h5>
+          <h4>Heading Level 4</h4>
+          <h3>Heading Level 3</h3>
+          <h2>Heading Level 2</h2>
+        </div>
+
+        <div class="text-component padding-bottom-lg">
+          <h4>Blockquote</h4>
+          <blockquote class="text__block">
+            Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget tempus
+            euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu
+            felis iaculis volutpat ac adipiscing accumsan faucibus. Vestibulum ante ipsum primis in
+            faucibus lorem ipsum dolor sit amet nullam adipiscing eu felis.
+          </blockquote>
+
+          <h4>Preformatted</h4>
+          <pre><code >i = 0;
+
+while (!deck.isInOrder()) {
+  print 'Iteration ' + i;
+  deck.shuffle();
+  i++;
+}
+
+print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
+        </div>
+      </div>
+    </section>
+
+    <hr class="text__hr" />
+
+    <!-- LIST STYLING -->
+    <section class="margin-y-xl">
+      <div class="container max-width-md">
+        <h3 class="padding-bottom-md">Ordered & Unordered List Items</h3>
+        <div class="grid gap-lg items-center@md">
+          <div class="col-6">
+            <h4 class="padding-bottom-xxxs">Default style unordered List</h4>
+            <ul class="unord__list-D padding-bottom-sm">
+              <li>Dolor pulvinar amet etiam.</li>
+              <li>Sagittis adipiscing lorem eleifend.</li>
+              <li>Felis enim feugiat viverra.</li>
+            </ul>
+            <h4 class="padding-bottom-xxxs">Circle style unordered List</h4>
+            <ul class="unord__list-C padding-bottom-sm">
+              <li>Dolor pulvinar amet etiam.</li>
+              <li>Sagittis adipiscing lorem eleifend.</li>
+              <li>Felis enim feugiat viverra.</li>
+            </ul>
+            <h4 class="padding-bottom-xxxs">Square style unordered List</h4>
+            <ul class="unord__list-S padding-bottom-sm">
+              <li>Dolor pulvinar amet etiam.</li>
+              <li>Sagittis adipiscing lorem eleifend.</li>
+              <li>Felis enim feugiat viverra.</li>
+            </ul>
+          </div>
+
+          <div class="col-6">
+            <h4 class="padding-bottom-xxxs">Ordered Alphabetic</h4>
+            <ol class="ord__listA padding-bottom-sm">
+              <li>Dolor pulvinar sed etiam.</li>
+              <li>Etiam vel lorem sed amet.</li>
+              <li>Felis enim feugiat viverra.</li>
+              <li>Dolor pulvinar magna etiam.</li>
+              <li>Etiam vel felis at sed viverra.</li>
+            </ol>
+            <h4 class="padding-bottom-xxxs">Ordered Roman</h4>
+            <ol class="ord__listR">
+              <li>Felis enim feugiat amet dolore.</li>
+              <li>Dolor pulvinar lorem etiam.</li>
+              <li>Etiam vel felis at lorem amet.</li>
+              <li>Felis enim feugiat viverra.</li>
+              <li>Dolor pulvinar magna etiam.</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="text__hr" />
+
+    <!-- BUTTONS & ICONS -->
+    <section class="padding-y-xl">
+      <div class="container max-width-lg">
+        <h3 class="">Buttons & Icons</h3>
+        <div class="grid gap-md items-center@md">
+          <div class="col-6">
+            <ul class="buttons__list">
+              <li class="buttons__item">
+                <a href="#" class="buttons__link btn small">Small</a>
+              </li>
+
+              <li class="buttons__item">
+                <a href="#" class="buttons__link btn small trans">Small</a>
+              </li>
+
+              <li class="buttons__item">
+                <a class="buttons__link btn" href="#">Default</a>
+              </li>
+
+              <li class="buttons__item">
+                <a class="buttons__link btn trans" href="#">Default</a>
+              </li>
+
+              <li class="buttons__item">
+                <a href="#" class="buttons__link btn large">Large</a>
+              </li>
+              <li class="buttons__item">
+                <a href="#" class="buttons__link btn large trans">Large</a>
+              </li>
+
+              <li class="buttons__item">
+                <a href="#" class="buttons__link btn wide">Wide</a>
+              </li>
+
+              <li class="buttons__item">
+                <a href="#" class="buttons__link btn wide trans">Wide</a>
+              </li>
+
+              <li class="buttons__item">
+                <a href="#" class="buttons__link btn fit">Fit</a>
+              </li>
+              <li class="buttons__item">
+                <a class="buttons__link btn fit trans" href="#">Fit</a>
+              </li>
+
+              <li class="buttons__item">
+                <a href="#" class="buttons__link btn fit small">Fit + Small</a>
+              </li>
+              <li class="buttons__item">
+                <a href="#" class="buttons__link btn fit small trans">Fit + Small</a>
+              </li>
+
+              <li class="buttons__item">
+                <a href="#" class="buttons__link btn icon fa fa-search">Icon</a>
+              </li>
+              <li class="buttons__item">
+                <a href="#" class="buttons__link btn icon trans fa fa-download">Icon</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-6">
+            <h2>Icons</h2>
+            <ul class="icons__list">
+              <li class="icons__item">
+                <a href="#" class="icons__link fa fa-android"
+                  ><span class="label"> Android</span></a
+                >
+              </li>
+
+              <li class="icons__item">
+                <a href="#" class="icons__link fa fa-dribbble"
+                  ><span class="label"> Dribbble</span></a
+                >
+              </li>
+
+              <li class="icons__item">
+                <a href="#" class="icons__link fa fa-facebook"
+                  ><span class="label"> facebook</span></a
+                >
+              </li>
+
+              <li class="icons__item">
+                <a href="#" class="icons__link fa fa-flickr"><span class="label"> Flicker</span></a>
+              </li>
+
+              <li class="icons__item">
+                <a href="#" class="icons__link fa fa-foursquare"
+                  ><span class="label"> Foursquare</span></a
+                >
+              </li>
+
+              <li class="icons__item">
+                <a href="#" class="icons__link fa fa-github"><span class="label"> Github</span></a>
+              </li>
+
+              <li class="icons__item">
+                <a href="#" class="icons__link fa fa-google"><span class="label"> Google</span></a>
+              </li>
+
+              <li class="icons__item">
+                <a href="#" class="icons__link fa fa-instagram"
+                  ><span class="label"> Instagram</span></a
+                >
+              </li>
+
+              <li class="icons__item">
+                <a href="#" class="icons__link fa fa-reddit"><span class="label"> Reddit</span></a>
+              </li>
+
+              <li class="icons__item">
+                <a href="#" class="icons__link fa fa-soundcloud"
+                  ><span class="label"> Soundcloud</span></a
+                >
+              </li>
+
+              <li class="icons__item">
+                <a href="#" class="icons__link fa fa-stumbleupon"
+                  ><span class="label"> Stumbleupon</span></a
+                >
+              </li>
+
+              <li class="icons__item">
+                <a href="#" class="icons__link fa fa-tumblr"><span class="label"> Tumblr</span></a>
+              </li>
+
+              <li class="icons__item">
+                <a href="#" class="icons__link fa fa-twitter"
+                  ><span class="label"> Twitter</span></a
+                >
+              </li>
+
+              <li class="icons__item">
+                <a href="#" class="icons__link fa fa-vimeo"><span class="label"> Vimeo</span></a>
+              </li>
+
+              <li class="icons__item">
+                <a href="#" class="icons__link fa fa-vine"><span class="label"> Vine</span></a>
+              </li>
+
+              <li class="icons__item">
+                <a href="#" class="icons__link fa fa-yahoo"><span class="label"> Yahoo</span></a>
+              </li>
+
+              <li class="icons__item">
+                <a href="#" class="icons__link fa fa-500px"><span class="label"> 500px</span></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="text__hr" />
+
+    <!-- DEFINATION & PAGINATION -->
+    <section class="padding-y-xl">
+      <div class="container max-width-lg">
+        <h3 class="">Defiantion & Pagination</h3>
+        <div class="grid gap-md items-center@md">
+          <div class="col-6">
+            <dl>
+              <dt class="def__subTitle">Alpha</dt>
+              <dd class="def__txt">
+                <p>
+                  Lorem ipsum dolor vestibulum ante ipsum primis in faucibus vestibulum. Blandit
+                  adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer
+                  ac pellentesque praesent.
+                </p>
+              </dd>
+              <dt class="def__subTitle">Beta</dt>
+              <dd class="def__txt">
+                <p>
+                  Lorem ipsum dolor vestibulum ante ipsum primis in faucibus vestibulum. Blandit
+                  adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer
+                  ac pellentesque praesent.
+                </p>
+              </dd>
+              <dt class="def__subTitle">Gamma</dt>
+              <dd class="def__txt">
+                <p>
+                  Lorem ipsum dolor vestibulum ante ipsum primis in faucibus vestibulum. Blandit
+                  adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer
+                  ac pellentesque praesent.
+                </p>
+              </dd>
+            </dl>
+          </div>
+
+          <div class="col-6 flex flex-wrap gap-sm">
+            <nav class="pagination" aria-label="Pagination">
+              <ol class="pagination__list flex flex-wrap gap-xxxs justify-center">
+                <li>
+                  <a
+                    href="#0"
+                    class="pagination__item pagination__item--disabled"
+                    aria-label="Go to previous page"
+                  >
+                    <svg class="icon icon--xs margin-right-xxxs flip-x" viewBox="0 0 16 16">
+                      <polyline
+                        points="6 2 12 8 6 14"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      />
+                    </svg>
+                    <span>Prev</span>
+                  </a>
+                </li>
+
+                <li class="display@sm">
+                  <a href="#0" class="pagination__item" aria-label="Go to page 1">1</a>
+                </li>
+
+                <li class="display@sm">
+                  <a href="#0" class="pagination__item" aria-label="Go to page 2">2</a>
+                </li>
+
+                <li class="display@sm">
+                  <a
+                    href="#0"
+                    class="pagination__item pagination__item--selected"
+                    aria-label="Current Page, page 3"
+                    aria-current="page"
+                    >3</a
+                  >
+                </li>
+
+                <li class="display@sm">
+                  <a href="#0" class="pagination__item" aria-label="Go to page 4">4</a>
+                </li>
+
+                <li class="display@sm" aria-hidden="true">
+                  <span class="pagination__item pagination__item--ellipsis">...</span>
+                </li>
+
+                <li class="display@sm">
+                  <a href="#0" class="pagination__item" aria-label="Go to page 20">20</a>
+                </li>
+
+                <li>
+                  <a href="#0" class="pagination__item" aria-label="Go to next page">
+                    <span>Next</span>
+                    <svg class="icon icon--xs margin-left-xxxs" viewBox="0 0 16 16">
+                      <polyline
+                        points="6 2 12 8 6 14"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      />
+                    </svg>
+                  </a>
+                </li>
+              </ol>
+            </nav>
+            <nav class="breadcrumbs text-sm" aria-label="Breadcrumbs">
+              <ol class="flex flex-wrap gap-xxs">
+                <li class="breadcrumbs__item">
+                  <a href="#0" class="color-inherit">Home</a>
+                  <span class="color-contrast-lower margin-left-xxs" aria-hidden="true">/</span>
+                </li>
+
+                <li class="breadcrumbs__item">
+                  <a href="#0" class="color-inherit">Gallery</a>
+                  <span class="color-contrast-lower margin-left-xxs" aria-hidden="true">/</span>
+                </li>
+
+                <li class="breadcrumbs__item">
+                  <a href="#0" class="color-inherit">Web</a>
+                  <span class="color-contrast-lower margin-left-xxs" aria-hidden="true">/</span>
+                </li>
+
+                <li class="breadcrumbs__item" aria-current="page">Project</li>
+              </ol>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="text__hr" />
+
+    <!-- TABLE STYLING -->
+    <section class="padding-y-xl">
+      <div class="container max-width-md">
+        <h3 class="">Table Format</h3>
+        <div class="tbl">
+          <table
+            class="tbl__table text-unit-em text-sm border-bottom border-2"
+            aria-label="Table Example"
+          >
+            <thead class="tbl__header border-bottom border-2">
+              <tr class="tbl__row">
+                <th class="tbl__cell text-left" scope="col">
+                  <span class="text-sm text-uppercase letter-spacing-lg font-semibold">Name</span>
+                </th>
+
+                <th class="tbl__cell text-left" scope="col">
+                  <span class="text-sm text-uppercase letter-spacing-lg font-semibold">Job</span>
+                </th>
+
+                <th class="tbl__cell text-left" scope="col">
+                  <span class="text-sm text-uppercase letter-spacing-lg font-semibold"
+                    >Country</span
+                  >
+                </th>
+
+                <th class="tbl__cell text-left" scope="col">
+                  <span class="text-sm text-uppercase letter-spacing-lg font-semibold">Status</span>
+                </th>
+
+                <th class="tbl__cell text-right" scope="col">
+                  <span class="text-sm text-uppercase letter-spacing-lg font-semibold">Salary</span>
+                </th>
+              </tr>
+            </thead>
+
+            <tbody class="tbl__body">
+              <tr class="tbl__row">
+                <td class="tbl__cell" role="cell">
+                  <div class="flex items-center">
+                    <figure
+                      class="width-lg height-lg radius-50% flex-shrink-0 overflow-hidden margin-right-xs"
+                    >
+                      <img
+                        class="block width-100% height-100% object-cover"
+                        src="../img/cl-1.jpg"
+                        alt="Author picture"
+                      />
+                    </figure>
+
+                    <div class="line-height-xs">
+                      <p class="margin-bottom-xxxxs">Olivia Saturday</p>
+                      <p class="color-contrast-medium">olivia@email.com</p>
+                    </div>
+                  </div>
+                </td>
+
+                <td class="tbl__cell" role="cell">Senior Data Engineer</td>
+
+                <td class="tbl__cell" role="cell">USA</td>
+
+                <td class="tbl__cell" role="cell">
+                  <span class="text-sm padding-y-xxxs padding-x-xs">Online</span>
+                </td>
+
+                <td class="tbl__cell text-right" role="cell">$320,000</td>
+              </tr>
+
+              <tr class="tbl__row">
+                <td class="tbl__cell" role="cell">
+                  <div class="flex items-center">
+                    <figure
+                      class="width-lg height-lg radius-50% flex-shrink-0 overflow-hidden margin-right-xs"
+                    >
+                      <img
+                        class="block width-100% height-100% object-cover"
+                        src="../img/cl-2.jpg"
+                        alt="Author picture"
+                      />
+                    </figure>
+
+                    <div class="line-height-xs">
+                      <p class="margin-bottom-xxxxs">David Smith</p>
+                      <p class="color-contrast-medium">david@email.com</p>
+                    </div>
+                  </div>
+                </td>
+
+                <td class="tbl__cell" role="cell">Strategic Finance Manager</td>
+
+                <td class="tbl__cell" role="cell">United Kingdom</td>
+
+                <td class="tbl__cell" role="cell">
+                  <span
+                    class="inline-block text-sm bg-error bg-opacity-20% color-error-darker radius-full padding-y-xxxs padding-x-xs ws-nowrap"
+                    >Offline</span
+                  >
+                </td>
+
+                <td class="tbl__cell text-right" role="cell">$180,000</td>
+              </tr>
+
+              <tr class="tbl__row">
+                <td class="tbl__cell" role="cell">
+                  <div class="flex items-center">
+                    <figure
+                      class="width-lg height-lg radius-50% flex-shrink-0 overflow-hidden margin-right-xs"
+                    >
+                      <img
+                        class="block width-100% height-100% object-cover"
+                        src="../img/cl-3.jpg"
+                        alt="Author picture"
+                      />
+                    </figure>
+
+                    <div class="line-height-xs">
+                      <p class="margin-bottom-xxxxs">Marta Rossi</p>
+                      <p class="color-contrast-medium">marta@email.com</p>
+                    </div>
+                  </div>
+                </td>
+
+                <td class="tbl__cell" role="cell">Lead Software Engineer</td>
+
+                <td class="tbl__cell" role="cell">Italy</td>
+
+                <td class="tbl__cell" role="cell">
+                  <span
+                    class="inline-block text-sm bg-success bg-opacity-20% color-success-darker radius-full padding-y-xxxs padding-x-xs ws-nowrap"
+                    >Online</span
+                  >
+                </td>
+
+                <td class="tbl__cell text-right" role="cell">$250,000</td>
+              </tr>
+
+              <tr class="tbl__row">
+                <td class="tbl__cell" role="cell">
+                  <div class="flex items-center">
+                    <figure
+                      class="width-lg height-lg radius-50% flex-shrink-0 overflow-hidden margin-right-xs"
+                    >
+                      <img
+                        class="block width-100% height-100% object-cover"
+                        src="../img/cl-4.jpg"
+                        alt="Author picture"
+                      />
+                    </figure>
+
+                    <div class="line-height-xs">
+                      <p class="margin-bottom-xxxxs">Paul Brown</p>
+                      <p class="color-contrast-medium">paul@email.com</p>
+                    </div>
+                  </div>
+                </td>
+
+                <td class="tbl__cell" role="cell">Digital Content Writer</td>
+
+                <td class="tbl__cell" role="cell">USA</td>
+
+                <td class="tbl__cell" role="cell">
+                  <span
+                    class="inline-block text-sm bg-success bg-opacity-20% color-success-darker radius-full padding-y-xxxs padding-x-xs ws-nowrap"
+                    >Online</span
+                  >
+                </td>
+
+                <td class="tbl__cell text-right" role="cell">$145,000</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <hr class="text__hr" />
+
+    <!-- TABLE STYLING -->
+    <section class="padding-y-xl">
+      <div class="container max-width-md">
+        <form>
+          <fieldset class="margin-bottom-md">
+            <legend class="form-legend">Form Legend</legend>
+
+            <div class="grid gap-sm">
+              <div class="col-6@md">
+                <label class="form-label margin-bottom-xxs" for="input-name">Name</label>
+                <input
+                  class="form-control width-100%"
+                  type="text"
+                  name="input-name"
+                  id="input-name"
+                  required
+                />
+              </div>
+
+              <div class="col-6@md">
+                <label class="form-label margin-bottom-xxs" for="input-email">Email</label>
+                <input
+                  class="form-control width-100%"
+                  type="email"
+                  name="input-email"
+                  id="input-email"
+                  placeholder="email@myemail.com"
+                />
+              </div>
+
+              <div>
+                <label class="form-label margin-bottom-xxs" for="input-invalid">Invalid</label>
+                <input
+                  class="form-control width-100%"
+                  type="text"
+                  name="input-invalid"
+                  id="input-invalid"
+                  aria-invalid="true"
+                  value="invalid data"
+                />
+                <div
+                  class="bg-error bg-opacity-20% padding-xs radius-md text-sm color-contrast-higher margin-top-xxs"
+                  role="alert"
+                >
+                  <p><strong>Error:</strong> this is an error message</p>
+                </div>
+              </div>
+
+              <div>
+                <label class="form-label margin-bottom-xxs" for="textarea">Textarea</label>
+                <textarea class="form-control width-100%" name="textarea" id="textarea"></textarea>
+                <p class="text-xs color-contrast-medium margin-top-xxs">
+                  Use helper text to provide additional information.
+                </p>
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset class="margin-bottom-md">
+            <legend class="form-legend">Radio Buttons</legend>
+
+            <ul class="flex flex-column gap-xxxs">
+              <li>
+                <input class="radio" type="radio" name="radio-buttons" id="radio-1" checked />
+                <label for="radio-1">Choice 1</label>
+              </li>
+
+              <li>
+                <input class="radio" type="radio" name="radio-buttons" id="radio-2" />
+                <label for="radio-2">Choice 2</label>
+              </li>
+            </ul>
+          </fieldset>
+
+          <fieldset class="margin-bottom-md">
+            <legend class="form-legend">Checkboxes</legend>
+
+            <div class="flex flex-wrap gap-md">
+              <div>
+                <input class="checkbox" type="checkbox" id="checkbox-1" />
+                <label for="checkbox-1">Option 1</label>
+              </div>
+
+              <div>
+                <input class="checkbox" type="checkbox" id="checkbox-2" />
+                <label for="checkbox-2">Option 2</label>
+              </div>
+            </div>
+          </fieldset>
+
+          <div>
+            <button class="btn btn--primary">Submit</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <!-- <%= require('../partials/footer.html?raw') %> -->
+  </body>
+</html>
